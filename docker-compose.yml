@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ody
+      POSTGRES_PASSWORD: ody
+      POSTGRES_DB: ody
+    ports:
+      - "5432:5432"
+    volumes:
+      - ody-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ody -d ody"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  ody-pg:

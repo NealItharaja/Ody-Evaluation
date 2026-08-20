@@ -1,0 +1,21 @@
+packages:
+  - "apps/*"
+  - "services/*"
+  - "packages/*"
+
+# React Native's Metro bundler and Expo autolinking expect an npm-style flat
+# node_modules, so opt out of pnpm's isolated layout for the whole workspace.
+nodeLinker: hoisted
+strictPeerDependencies: false
+autoInstallPeers: true
+
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+  workerd: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - workerd
+  - unrs-resolver

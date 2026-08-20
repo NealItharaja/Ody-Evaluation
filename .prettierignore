@@ -1,0 +1,10 @@
+node_modules
+dist
+.turbo
+.expo
+.wrangler
+coverage
+pnpm-lock.yaml
+**/generated/**
+openapi.json
+*.png

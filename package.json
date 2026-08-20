@@ -1,0 +1,30 @@
+{
+  "name": "ody-evaluation",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:dashboard": "pnpm --filter @ody/dashboard dev",
+    "dev:backend": "pnpm --filter @ody/backend dev",
+    "db:up": "docker compose up -d",
+    "db:migrate": "pnpm --filter @ody/backend db:migrate",
+    "db:seed": "pnpm --filter @ody/backend db:seed",
+    "gen:contract": "pnpm --filter @ody/backend gen:openapi && pnpm --filter @ody/api-client gen:client",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "turbo": "2.10.11",
+    "typescript": "~6.0.3"
+  }
+}
