@@ -1,0 +1,2 @@
+# Use 127.0.0.1 (not localhost) so wrangler’s Windows TCP proxy can reach Docker Postgres.
+DATABASE_URL=postgres://ody:ody@127.0.0.1:5432/ody

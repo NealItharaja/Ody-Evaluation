@@ -1,0 +1,34 @@
+{
+  "name": "@ody/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "gen:openapi": "tsx scripts/gen-openapi.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "prettier --check src tests scripts",
+    "clean": "rimraf .turbo .wrangler node_modules"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^1.6.0",
+    "@ody/types": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "drizzle-zod": "^0.8.3",
+    "hono": "^4.13.3",
+    "postgres": "^3.4.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20250812.0",
+    "@electric-sql/pglite": "^0.3.14",
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.124.0"
+  }
+}
