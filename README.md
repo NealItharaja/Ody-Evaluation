@@ -1,6 +1,6 @@
 # Odyssey Ops
 
-A restaurant operations dashboard for **Rosemary & Vine**: live tickets, menu availability, CRM, and ordering settings. Built to the Odyssey fullstack assignment stack — not a substitute stack.
+A restaurant operations dashboard for **Rosemary & Vine**: live tickets, menu availability, CRM, and ordering settings. Built to the Odyssey fullstack assignment stack
 
 ## Stack
 
@@ -15,6 +15,7 @@ A restaurant operations dashboard for **Rosemary & Vine**: live tickets, menu av
 | Types | `packages/types` — error envelope and primitives only (no API DTOs) |
 | Client | `packages/api-client` — generated hooks; screens never call `fetch` |
 
+Directory structure is roughly as follows:
 ```text
 apps/dashboard
 services/backend
